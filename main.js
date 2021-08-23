@@ -52,7 +52,7 @@ function populateTableList(){
       <td class="w-15 align-middle">${prod.name}</td>
       <td class="w-25 align-middle">${prod.price}€</td>
       <td class="w-25 align-middle">${prod.description}</td>
-      <td class="w-25 align-middle"><button class="btn btn-info">View</button></td>
+      <td class="w-25 align-middle"><button class="btn btn-info">Select</button></td>
     </tr>
     `   
 )

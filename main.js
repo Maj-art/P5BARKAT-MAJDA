@@ -41,16 +41,21 @@ let product5 = {
 let products=[];
 products.push(product,product2,product3,product4,product5);
 
+function populateTableList(){
+    let Productlist = '';
+    
+    products.forEach(prod =>
+    Productlist +=`
+    <tr class="text-center">
+      <td><img src=${prod.image} class="img-fluid img-thumbnail w-100"></td>
+      <td class="w-25 align-middle">${prod.id}</td>
+      <td class="w-15 align-middle">${prod.name}</td>
+      <td class="w-25 align-middle">${prod.price}€</td>
+      <td class="w-25 align-middle">${prod.description}</td>
+      <td class="w-25 align-middle"><button class="btn btn-info">View</button></td>
+    </tr>
+    `   
+)
 
-products.forEach(prod=>
-    listOfProducts+= `
-      <tr class="text-center">
-        <td>${prod.price}€</td>
-        
-      </tr>
-      `   
-  )
- 
-document.getElementById('productList').innerHTML = listOfProducts;
+document.getElementById('productList').innerHTML = Productlist;
 }
-  

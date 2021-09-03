@@ -40,9 +40,9 @@ getProductList().then(
   
       });
     }
-  ).catch(
-    function(error) {
-      console.log('Fetch Error :-S', err);
-    }
-  )
-  
+    ).catch(
+        function(error) {
+          console.log('Fetch Error :-S', err);
+        }
+      )
+      

@@ -10,22 +10,55 @@
     <title>Orinoco</title>
 </head>
 <body>
- 
-        <div class="container bg-white p-5 mt-5">
-          <!-- Logo -->
-          <div class="bg-dark text-center text-light py-3"><i class="fas fa-shopping-cart"></i>Orinoco</div>
-          
+
+  <header>
+    <a href="#" class="logo"><span><i class="fas fa-shopping-cart"></i>Orinoco</span></a>
+  </header>
+
+<section class="banniere" id="banniere">
+    <div class="contenu">
+
+        <h2>Nos ours en Peluche</h2>
+        <p>Ours fait main - Achetez une variété de produits à prix abordables. Economisez avec notre option de livraison gratuite.</p>
+        <a href="#banniere" class="btn1"onclick="toggleMenu();">Accueil</a>
+        <a href="#contact"class="btn2"onclick="toggleMenu();">Contact</a>
+    </div>
+</section>
+
+
+        <div class="container">
+         
           <div id="product-list" class="row">
 
           </div>
        
         </div>
         <!-- Footer -->
-        <footer class="container-fluid fixed-bottom bg-dark text-light">
-          <div class=" text-center py-3"><i class="fas fa-shopping-cart"></i>Orinoco</div>  
+        <footer class="container-fluid">
+          <section class="contact" id="contact">
+            <div class="titre noir">
+                <h2 class="titre-text">Contact</h2>
+            </div>
+            <div class="contactform">
+                <h3>Envoyer un message</h3>
+                <div class="inputboite">
+                    <input type="text" placeholder="Nom">
+                </div>
+                <div class="inputboite">
+                   <input type="text" placeholder="email">
+                </div>
+                <div class="inputboite">
+                   <textarea placeholder="message"></textarea>
+                </div>
+                <div class="inputboite">
+                    <input type="submit" value="envoyer">
+                </div>
+            </div>
+        </section> 
         </footer>
       <!-- Code javaScript -->
       <script src="./script/main.js"></script>
       <script src="./script/index.js"></script>
+      
 </body>
 </html>

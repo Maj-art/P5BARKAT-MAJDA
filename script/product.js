@@ -24,18 +24,3 @@ if (productId !== null) {
     }
   )
 }
-const CartScreen = {
-  after_render: ()=> {},
-  render: async () => {
-    const request = ParseRequestUrl ();
-    if (request.id) {
-
-      const product = await getProduct(request.id);
-      addToCart({
-        product: product._id,
-        image: product.image,
-        name: product.name,
-        price: product.price,
-        Description: product.description,
-    }) ;
-}

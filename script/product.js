@@ -11,10 +11,29 @@ if (productId !== null) {
         return;
       }
   
-      response.json().then(function(data) {
-        console.log(data);
+      response.json().then(function(product) {
 
-        alert(data.price)
+        let productImageDiv = document.getElementById('product-image');
+        let image = document.createElement("img");
+        image.src = product.imageUrl;
+        image.classList.add("img-fluid");
+        productImageDiv.appendChild(image);
+        
+        let productNameDiv = document.getElementById('product-name');
+        productNameDiv.innerText = product.name;
+
+        let productPriceDiv = document.getElementById('product-price');
+        productPriceDiv.innerText = formatPrice(product.price);
+
+        let productColorsSelect = document.getElementById('product-color-select');
+        product.colors.forEach(color => {
+          var opt = document.createElement("option");
+          opt.text = color;
+          productColorsSelect.add(opt);
+        });
+
+        let productDescriptionDiv = document.getElementById('product-description');
+        productDescriptionDiv.innerText = product.description;
   
       });
     }

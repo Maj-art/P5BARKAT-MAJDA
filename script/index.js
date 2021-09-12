@@ -33,10 +33,14 @@ getProductList().then(
         productTitle.innerText = product.name
         productDivBody.appendChild(productTitle);
 
+        let productPrice = document.createElement('p');
+        productPrice.innerText = formatPrice(product.price)
+        productDivBody.appendChild(productPrice);
+
         let productButton = document.createElement('a');
         productButton.classList.add("btn", "btn-primary");
         productButton.href = "product.html?id=" + product._id;
-        productButton.innerText = "See details";
+        productButton.innerText = "Détails produit";
         productDivBody.appendChild(productButton);
 
         productDiv.appendChild(productDivBody);
@@ -52,6 +56,5 @@ getProductList().then(
     console.log('Fetch Error :-S', err);
   }
 )
-
 
 

@@ -132,6 +132,18 @@ header .navbar li a:hover{
 
     
 }
+.btn-panier
+a
+{
+    text-decoration: none;
+    color:black;
+    
+}
+
+.btn-panier
+{
+    background-color: orange;
+}
 
 h3{
     width: 100%;
